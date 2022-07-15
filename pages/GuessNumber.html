@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/GuessNumber.css">
-    <script src=".js/GuessNumber.js" defer></script>
+    <script src="/js/GuessNumber.js" defer></script>
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     </header>
 
     <main class="container">
-        <form>
+        <form id="form">
             <label for="kick">Digite um Numero (0 a 10)</label>
 
             <input type="number" id="kick" max="10" placeholder="0">
@@ -33,7 +33,7 @@
             <span id="attemp">Tentativas: 0</span>
         </section>
 
-        <button id="btnRestart">Jogar de novo!</button>
+        <button id="btnRestart" onclick="restart()">Jogar de novo!</button>
 
 
     </main>
