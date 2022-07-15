@@ -52,7 +52,7 @@ header a h1{
     padding: 2rem;
     margin-top: 5%;
     border-radius: 0.5rem;
-    box-shadow:2px 3px 3px 0.2px rgba(238, 95, 0, 0.8) ;
+    box-shadow:2px 3px 3px 0.2px rgba(238, 95, 0, 0.4) ;
     /*border: 0.2rem solid var(--orange);*/
 }
 
@@ -102,7 +102,7 @@ header a h1{
     width: 40%;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow:2px 3px 3px 0.2px rgba(238, 95, 0, 0.8) ;
+    box-shadow:2px 3px 3px 0.2px rgba(0, 0, 0, 0.4) ;
     color:var(--orange) ;
 }
 .container .result-box h2{
