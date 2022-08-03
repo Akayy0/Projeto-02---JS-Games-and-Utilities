@@ -1,0 +1,31 @@
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none; 
+}
+
+/* Conteudo do board */
+
+#gameContainer{
+    margin-top: 1%;
+    text-align: center;
+}
+#gameBoard{
+    border: 3px solid;
+}
+#scoreText{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5rem;
+}
+#resetBtn{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
