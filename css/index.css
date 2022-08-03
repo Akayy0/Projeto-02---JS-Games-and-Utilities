@@ -8,7 +8,7 @@
 }
 
 :root{
-    /* MainHub Colors */
+    /* Main Colors */
     --white: rgb(255, 255, 255);
     --grey: rgb(184, 184, 184);
     --black: rgb(20, 20, 20);
@@ -16,6 +16,16 @@
     /* GuessNumber Colors */
     --yellow: rgb(252, 230, 105);
     --orange: rgb(209, 101, 0);
+
+    /* Snake Colors */
+    --green: rgb(7, 100, 23);
+    --red: rgb(184, 27, 27);
+
+    /* Calculator Colors */
+    --cian: rgb(51, 209, 230);
+    --darkgrey: rgb(122, 121, 121);
+
+
 }
 
 /* Header */
@@ -23,10 +33,12 @@ header{
     width: 100%;
     text-align: center;
     padding: 2rem;
+    background-color: var(--black);
 }
 header h1{
     font-size: 5rem;
     font-weight: 300;
+    color: var(--white);
 }
 
 /* main */
@@ -34,7 +46,158 @@ header h1{
 main .links{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    
+    background-color: rgb(226, 226, 226);
+    height: 60vh;
+    
+    
+}
+
+/* seções dos links para as paginas */
+/* Referente ao guess number */
+.links .guessnumber{
+    background-color: var(--yellow);
+    height: 50vh;
+    width: 35vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    box-shadow: 4px 4px 2px 1px rgb(0, 0, 0, 0.5);
+    
+
+
+
+    color: var(--orange);
 }
 
 
+.guessnumber h2{
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.guessnumber p{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 3%;
+    padding-bottom: 8%;
+    margin-bottom: 5%;
+}
+
+.guessnumber a{
+    margin:33% ;
+    padding: 5% 10%;
+    background-color: var(--orange);
+    color: var(--yellow);
+    border-radius: 4%;
+    box-shadow: 3px 2px 0px 0px rgb(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;   
+}
+
+.guessnumber a:hover{
+    background-color: var(--white);
+    color: var(--orange);
+
+}
+
+/* Referente ao snake */
+.links .snake{
+    background-color: var(--green);
+    height: 50vh;
+    width: 35vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    box-shadow: 4px 4px 2px 1px rgb(0, 0, 0, 0.5);
+    
+
+
+
+    color: var(--white);
+}
+
+
+.snake h2{
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.snake p{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 3%;
+    padding-bottom: 8%;
+    margin-bottom: 5%;
+}
+
+.snake a{
+    margin:33% ;
+    padding: 5% 10%;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 4%;
+    box-shadow: 3px 2px 0px 0px rgb(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;   
+}
+
+.snake a:hover{
+    background-color: var(--white);
+    color: var(--red);
+}
+
+/* Referente a Calculator */
+
+.links .calculator{
+    background-color: var(--black);
+    height: 50vh;
+    width: 35vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    box-shadow: 4px 4px 2px 1px rgb(0, 0, 0, 0.5);
+    
+
+
+
+    color: var(--cian);
+}
+
+
+.calculator h2{
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.calculator p{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 3%;
+    padding-bottom: 8%;
+    margin-bottom: 5%;
+}
+
+.calculator a{
+    margin:33% ;
+    padding: 5% 10%;
+    background-color: var(--cian);
+    color: var(--black);
+    border-radius: 4%;
+    box-shadow: 3px 2px 0px 0px rgb(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;   
+}
+
+.calculator a:hover{
+    background-color: var(--darkgrey);
+    color: var(--cian);
+
+}
