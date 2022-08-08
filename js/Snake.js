@@ -14,8 +14,8 @@ let score = 0;
 // variaveis referentes as cores
 
 const boardBackground = "rgb(43, 105, 53)";
-const snakeColor = "rgb(184, 184, 184)";
-const snakeBorder = "rgb(20, 20, 20)";
+const snakeColor = "rgb(255, 255, 255)";
+const snakeBorder = "rgb(255, 255, 255)";
 const foodColor = "rgb(184, 27, 27)";
 
 // responsavel por falar se o jogo esta ativo ou nao
@@ -49,8 +49,9 @@ resetBtn.addEventListener("click", resetGame);
 
 // funções para o jogo
 
-// Função referente a o que vai ocorrer quando o jogo estiver ativo
+// Chamada de função que ira iniciar o jogo
 gameStart()
+// Função referente a o que vai ocorrer quando o jogo estiver ativo
 
 function gameStart(){
     running= true;
@@ -103,6 +104,18 @@ function drawFood(){
 };
 // Função referente ao movimento da snake
 function moveSnake(){
+    const head = {x: snake[0].x + xVelocity, y: snake[0].y +yVelocity}
+    snake.unshift(head);
+
+    // Referente ao momento em que a snake atinge a maçã
+    if(snake[0].x == foodX && snake[0].y == foodY){
+        score +=1;
+        scoreText.textContent = score;
+        createFood()
+    }
+    else{
+        snake.pop();
+    }
 
 };
 
@@ -116,11 +129,92 @@ function drawSnake(){
     })
 };
 
-function changeDirection(){};
+// Função referente ao movimento da snake para as direções
+function changeDirection(event){
+    const keyPressed = event.keyCode;
+    // valores encontrador com console.log(keyPressed), apertando a direção selecionada os valores sao mostrados
+    const LEFT = 37;
+    const UP = 38;
+    const RIGHT = 39;
+    const DOWN = 40;
 
-function checkGameOver(){};
+    const goingUp = (yVelocity == -unitSize);
+    const goingDown = (yVelocity == unitSize);
+    const goingRight = (xVelocity == unitSize);
+    const goingLeft = (xVelocity == -unitSize);
 
-function displayGameOver(){};
+    // Swhith para o movimento da snake
+    switch (true) {
+        case(keyPressed == LEFT && !goingRight):
+            xVelocity = -unitSize;
+            yVelocity = 0;
+            break;
+        case(keyPressed == UP && !goingDown):
+            xVelocity = 0;
+            yVelocity = -unitSize;
+            break;
+        case(keyPressed == RIGHT && !goingLeft):
+            xVelocity = unitSize;
+            yVelocity = 0;
+            break;
+        case(keyPressed == DOWN && !goingUp):
+            xVelocity = 0;
+            yVelocity = unitSize;
+            break;
+       
+    }
+};
 
-function resetGame(){};
+// Função referente a instancias que definem um GameOver
+function checkGameOver(){
+    // GameOver caso a snake bata nas paredes
+    switch(true){
+        case (snake[0].x < 0):
+            running = false;
+            break;
+        case (snake[0].x >=gameWidth):
+            running = false;
+            break;
+        case (snake[0].y < 0):
+            running = false;
+            break;
+        case (snake[0].y >= gameHeight):
+            running = false;
+            break;
+    }
+    // GameOver caso o corpo da snake se encontre com uma de suas partes
+    // no caso criamos uma variavel (i), que vai agregar um valor que se for igual ao valor do corpo da snake o jogo e encerrado
+    for(let i = 1; i < snake.length; i+=1){
+        if(snake[i].x == snake[0].x && snake[i].y == snake[0].y){
+            running = false;
+        }
+    }
+};
+
+// Função que ficara responsavel por demonstrar na tela o texto de game over
+function displayGameOver(){
+    ctx.font = "50px Ubuntu";
+    ctx.fillStyle = "rgb(255, 255, 255)";
+    ctx.textAlign = "center";
+    ctx.fillText("GAME OVER!!!", gameWidth / 2, gameHeight / 2);
+    running = false;
+
+};
+
+// Função referente ao reset do game
+function resetGame(){
+    score = 0;
+    xVelocity = unitSize;
+    yVelocity = 0;
+    snake = [
+        {x:unitSize * 4, y:0},
+        {x:unitSize * 3, y:0},
+        {x:unitSize * 2, y:0},
+        {x:unitSize, y:0},
+        {x:0, y:0}
+    ];
+
+    gameStart();
+    
+};
 

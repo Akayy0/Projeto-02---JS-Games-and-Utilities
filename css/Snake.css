@@ -7,10 +7,44 @@
     text-decoration: none; 
 }
 
-/* Conteudo do board */
+:root{
+    --green: rgb(43, 105, 53);
+    --red: rgb(184, 27, 27);
+    --white: rgb(255, 255, 255);
+    --black: rgb(20, 20, 20);
+}
+
+/* Conteudo do Head e footer */
+header{
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    background-color:var(--green);
+}
+
+header h1{
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+footer{
+    margin-top: 5.23%;
+    background-color: var(--green);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 300;
+    box-shadow: 0px -2px 4px 2px rgba(0, 0, 0, 0.5);
+    
+}
+/* Conteudo do Campo do jogo*/
+
 
 #gameContainer{
-    margin-top: 1%;
+    margin-top: 3.9%;
     text-align: center;
 }
 #gameBoard{
@@ -22,10 +56,19 @@
 }
 #resetBtn{
     font-family: 'Ubuntu', sans-serif;
+    color: var(--white);
     font-size: 20px;
+    font-weight: 400;
     width: 100px;
     height: 50px;
-    border: 2px solid;
-    border-radius: 10px;
+    border: 2px solid var(--black);
+    border-radius: 2px;
+    background-color: var(--green);
     cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+#resetBtn:hover{
+    color: var(--black);
+    background-color: var(--white);
 }
