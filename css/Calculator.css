@@ -1,0 +1,44 @@
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none; 
+}
+
+:root{
+    
+    --white: rgb(255, 255, 255);
+    --black: rgb(27, 27, 27);
+    --cian: rgb(51, 209, 230);
+    --darkgrey: rgb(122, 121, 121);
+    --darkcian: rgb(31, 55, 58);
+}
+
+/* Conteudo do Head e footer */
+header{
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    background-color:var(--cian);
+}
+
+header h1{
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+footer{
+    margin-top: 5.23%;
+    background-color: var(--cian);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 300;
+    box-shadow: 0px -2px 4px 2px rgba(0, 0, 0, 0.5);
+    
+}
