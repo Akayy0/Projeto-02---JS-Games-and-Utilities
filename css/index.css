@@ -23,8 +23,8 @@
     --red: rgb(184, 27, 27);
 
     /* Calculator Colors */
-    --cian: rgb(51, 209, 230);
-    --darkgrey: rgb(122, 121, 121);
+    --roxo: rgba(79,51,176,1);
+    --rosa: rgba(210,53,165);
 
 
 }
@@ -35,6 +35,8 @@ header{
     text-align: center;
     padding: 2rem;
     background-color: var(--black);
+    position: relative;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 header h1{
     font-size: 5rem;
@@ -167,7 +169,7 @@ main .links{
 /* Referente a Calculator */
 
 .links .calculator{
-    background-color: var(--black);
+    background-color: var(--roxo);
     height: 50vh;
     width: 35vh;
     margin-left: 2%;
@@ -178,7 +180,7 @@ main .links{
 
 
 
-    color: var(--cian);
+    color: var(--black);
 }
 
 
@@ -201,15 +203,15 @@ main .links{
 .calculator a{
     margin:33% ;
     padding: 5% 10%;
-    background-color: var(--cian);
-    color: var(--black);
+    background-color: var(--rosa);
+    color: var(--white);
     border-radius: 4%;
     box-shadow: 3px 2px 0px 0px rgb(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;   
 }
 
 .calculator a:hover{
-    background-color: var(--darkgrey);
-    color: var(--cian);
+    background-color: var(--white);
+    color: var(--rosa);
 
 }
